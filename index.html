@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcelo Garcia — Senior Platform Engineer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        slate: { 850: '#172033' }
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0F172A; color: #F8FAFC; -webkit-font-smoothing: antialiased; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0F172A; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  .skill-pill { transition: all 0.2s ease; }
+  .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+
+  .timeline-dot { position: relative; }
+  .timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #F97316;
+    border: 2px solid #0F172A;
+    z-index: 2;
+  }
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    width: 2px;
+    height: calc(100% + 16px);
+    background: linear-gradient(to bottom, #334155, transparent);
+    z-index: 1;
+  }
+  .timeline-item:last-child .timeline-dot::after { display: none; }
+
+  .cert-badge { transition: all 0.25s ease; }
+  .cert-badge:hover { transform: scale(1.03); background: rgba(249,115,22,0.15); }
+
+  .glow-line {
+    height: 2px;
+    background: linear-gradient(to right, #F97316, #FB923C, transparent);
+    border-radius: 1px;
+  }
+
+  .contact-link { transition: all 0.2s ease; }
+  .contact-link:hover { color: #F97316; }
+
+  .role-tag {
+    background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(249,115,22,0.05));
+    border: 1px solid rgba(249,115,22,0.3);
+  }
+
+  @media print {
+    body { background: white; color: #0F172A; }
+    .no-print { display: none; }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  .category-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- Ambient Glow -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-500/5 blur-[120px] rounded-full pointer-events-none no-print"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-6 bg-slate-900/80 backdrop-blur-xl border-b border-white/5 no-print">
+  <div class="flex items-center gap-3">
+    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-sm">MG</div>
+    <span class="font-semibold text-sm tracking-tight">Marcelo Garcia</span>
+  </div>
+  <div class="flex items-center gap-6">
+    <a href="#experience" class="text-xs font-medium text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Experience</a>
+    <a href="#skills" class="text-xs font-medium text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Skills</a>
+    <a href="#certs" class="text-xs font-medium text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Certifications</a>
+    <a href="#contact" class="text-xs font-medium text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="pt-32 pb-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="glow-line w-16"></div>
+        <span class="text-[10px] font-semibold uppercase tracking-[0.15em] text-orange-400">Platform Engineer · DevOps · SRE · Cloud Architect</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.05] mb-4">
+        Marcelo<br>
+        <span class="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">Garcia</span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl leading-relaxed mt-6">
+        Lead Platform Engineer & Senior DevOps/SRE with <strong class="text-slate-200">21+ years in IT</strong> and <strong class="text-slate-200">10+ years in cloud infrastructure</strong>, Kubernetes, platform engineering, reliability, and automation.
+      </p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="reveal mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-800/50 border border-white/5 rounded-xl p-4">
+        <div class="text-2xl font-bold text-orange-400">21+</div>
+        <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Years in IT</div>
+      </div>
+      <div class="bg-slate-800/50 border border-white/5 rounded-xl p-4">
+        <div class="text-2xl font-bold text-orange-400">10+</div>
+        <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Years Cloud/DevOps</div>
+      </div>
+      <div class="bg-slate-800/50 border border-white/5 rounded-xl p-4">
+        <div class="text-2xl font-bold text-orange-400">3</div>
+        <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Cloud Platforms</div>
+      </div>
+      <div class="bg-slate-800/50 border border-white/5 rounded-xl p-4">
+        <div class="text-2xl font-bold text-orange-400">7+</div>
+        <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Certifications</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Professional Summary -->
+<section class="px-6 pb-16">
+  <div class="max-w-5xl mx-auto reveal">
+    <div class="bg-slate-800/30 border border-white/5 rounded-2xl p-8">
+      <h2 class="text-xs font-semibold uppercase tracking-[0.15em] text-orange-400 mb-4 flex items-center gap-2">
+        <span class="iconify" data-icon="lucide:file-text" data-width="14"></span>
+        Professional Summary
+      </h2>
+      <div class="space-y-4 text-sm text-slate-400 leading-relaxed">
+        <p>Experienced in designing and operating secure cloud-native platforms across <strong class="text-slate-300">AWS, Azure, and Google Cloud</strong>, with deep hands-on expertise in <strong class="text-slate-300">Kubernetes, Terraform, GitOps, Istio</strong>, observability, workload identity, and secrets management.</p>
+        <p>Combines technical leadership with practical implementation, translating infrastructure measurements and operational risks into clear architecture decisions, production-readiness assessments, rollout strategies, and engineering standards. Recent work includes assessing Istio ingress capacity for a projected <strong class="text-slate-300">threefold traffic increase</strong>, designing an Amazon EKS platform using Pod Identity, Argo CD, and Karpenter, and troubleshooting complex Kubernetes integrations involving TLS, JWT authentication, Conjur, Vault, and External Secrets Operator.</p>
+        <p>Builds internal automation and developer tooling in <strong class="text-slate-300">Python and shell</strong>, while actively exploring <strong class="text-slate-300">AI-assisted engineering, agent observability, and local LLM infrastructure</strong>. Known for systematic troubleshooting, clear technical documentation, pragmatic architecture, and helping teams evolve platforms safely and sustainably.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="px-6 pb-20">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-10">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="glow-line w-10"></div>
+        <h2 class="text-2xl font-semibold tracking-tight">Last 10 Years of Experience</h2>
+      </div>
+    </div>
+
+    <div class="relative ml-6 space-y-10">
+
+      <!-- Job 1 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2025.03 — 2026.05</span>
+            <span class="role-tag text-[10px] font-semibold text-orange-300 px-2 py-0.5 rounded-full">Contract</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer — Agentic Engineering</h3>
+          <p class="text-sm text-slate-500 mb-4">Freight Forwarder Chile · Remote · Santiago, Chile</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Designed and implemented Kubernetes-based platform <strong class="text-slate-300">(EKS + Istio + ArgoCD)</strong> supporting high-volume data workloads in AWS. Built microservices architecture using Python (FastAPI) integrated with external systems via REST APIs.</p>
+            <p>Implemented observability stack <strong class="text-slate-300">(Prometheus, Grafana, Loki)</strong> improving system visibility and incident response. Optimized infrastructure for high availability, security, and cost efficiency.</p>
+            <p>Led an <strong class="text-slate-300">Istio production-readiness and capacity assessment</strong> for onboarding ~96,000 transactions/minute onto shared Kubernetes ingress infrastructure, evaluating CPU, memory, latency, error rates, scaling behavior, and configuration consistency.</p>
+            <p>Identified exhausted ingress autoscaling headroom at 4/4 replicas and defined production-like load testing, monitoring, staged rollout, and rollback requirements for a projected <strong class="text-slate-300">3× traffic increase</strong>.</p>
+            <p>Investigated Istio sidecar memory consumption by correlating Envoy, Kubernetes, Prometheus, and cAdvisor measurements — demonstrated actual utilization of ~199 MiB and identified dashboard aggregation as the likely source of a <strong class="text-slate-300">1.8 GiB discrepancy</strong>.</p>
+            <p>Diagnosed and hardened <strong class="text-slate-300">Conjur OSS and External Secrets Operator</strong> integration on Kubernetes, resolving certificate SAN, CA trust, JWT service ID, OIDC issuer, audience, JWKS, and service-account identity issues.</p>
+            <p>Designed Terraform-based Amazon EKS platform using native EKS Pod Identity, managed add-ons, Argo CD, AWS Load Balancer Controller, ExternalDNS, cert-manager, EBS CSI, and Karpenter Spot capacity.</p>
+            <p>Defined infrastructure ownership boundaries between Terraform and Argo CD, establishing a GitOps bootstrap model with automated synchronization, pruning, and self-healing.</p>
+            <p>Evaluated AI engineering environments using <strong class="text-slate-300">Ollama, Qwen, DeepSeek, Harness, OmniRoute, Codex, and LangSmith</strong>. Implemented an agentic system to manage load assignment to orders and ships using <strong class="text-slate-300">LangChain, Python, and OpenAI</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2024.05 — 2024.12</span>
+            <span class="role-tag text-[10px] font-semibold text-orange-300 px-2 py-0.5 rounded-full">Contract</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer</h3>
+          <p class="text-sm text-slate-500 mb-4">FirstVet · Remote · Stockholm, Sweden</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Infrastructure automation in AWS, managing ECS clusters and cloud resources using <strong class="text-slate-300">Pulumi and TypeScript</strong>.</p>
+            <p>Big focus on cost optimization: implemented Compute Saving Plans, RDS reserved instances, replaced AWS Transfer with self-managed EC2 sftp server (huge savings), reserved nodes for ElastiCache, replaced Redis with <strong class="text-slate-300">Valkey</strong>, eliminated duplicate logs to CloudWatch and Grafana — using only Loki and Promtail.</p>
+            <p>Worked with <strong class="text-slate-300">Grafana, Loki, Prometheus, OpenTelemetry</strong> in the Observability Stack. Created Cost Dashboards, alerts, and anomaly cost alerts in AWS Billing.</p>
+            <p>Mentoring and knowledge sharing (SSL, SSH). PowerShell for managing SQL Server instances.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2022.09 — 2024.05</span>
+            <span class="role-tag text-[10px] font-semibold text-orange-300 px-2 py-0.5 rounded-full">Consultant</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior SRE Consultant</h3>
+          <p class="text-sm text-slate-500 mb-4">Expertake → Arelion · Stockholm, Sweden</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Main DevOps Engineer in a successful <strong class="text-slate-300">on-prem to AWS migration</strong> — 50 Java services (Docker Swarm → EKS) + 15 apps/databases (Zookeeper, RabbitMQ, MongoDB, MSSQL, Kafka, Beam → EC2/RDS) in <strong class="text-slate-300">3 months</strong>.</p>
+            <p>CI/CD pipelines in <strong class="text-slate-300">GitHub Actions</strong> for Java apps (Spring-boot, Payara). Migrated Kubernetes applications using <strong class="text-slate-300">Helmfile</strong>.</p>
+            <p>DevSecOps support: IDS/IPS (AWS managed), WAF, Shield, Control Service policies, end-to-end security.</p>
+            <p>Infrastructure with <strong class="text-slate-300">Terraform and AWS CDK (GoLang)</strong>. Configuration management with Ansible. MongoDB and MSSQL migrations to AWS (backup/restore). MSSQL → RDS.</p>
+            <p>Datadog integration, ELK stack implementation, ArgoCD management.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2021.03 — 2022.09</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer, Software Engineer</h3>
+          <p class="text-sm text-slate-500 mb-4">H&M · Stockholm, Sweden</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Google Cloud: POC for Data Architecture → <strong class="text-slate-300">Data Mesh model</strong>. Automation with vRealize, SaltStack, Ansible, GoCDK.</p>
+            <p><strong class="text-slate-300">Kafka</strong> implementation, data pipelines with flex templates (Kafka ↔ BigQuery/Pub-Sub). ArgoCD management.</p>
+            <p>Multi-cloud CI/CD pipelines in GitHub Actions. Independent secrets management with <strong class="text-slate-300">HashiCorp Vault</strong> on GKE (deployed via Terraform).</p>
+            <p>Data-oriented model: KPIs, metrics, dashboards, <strong class="text-slate-300">Grafana</strong> monitoring. Vulnerability mitigation alignment. Mentoring, interviewing. Azure Monitor integration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 5 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2020.07 — 2021.03</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Chapter Leader</h3>
+          <p class="text-sm text-slate-500 mb-4">Tele2 · Stockholm, Sweden</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>GCP pipeline automation (Ansible, GoCDK). Azure monitoring, Azure DevOps dashboards.</p>
+            <p>Improved automation to eliminate human intervention errors (PowerShell for Windows).</p>
+            <p>Generated activities backlog from competence matrix, balanced competences across DevOps/SRE team.</p>
+            <p>Maintained team happiness index, <strong class="text-slate-300">blameless culture</strong>, encouraged exploration of new technologies. Mentoring.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 6 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2019.06 — 2020.06</span>
+            <span class="role-tag text-[10px] font-semibold text-orange-300 px-2 py-0.5 rounded-full">Remote</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer, Sr SRE</h3>
+          <p class="text-sm text-slate-500 mb-4">Equifax · UK, Australia, USA</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Led <strong class="text-slate-300">Apigee Edge platform migration</strong> from AWS to Google Cloud, integrating with OpenShift clusters. Kubernetes clusters in GCP with Istio service mesh.</p>
+            <p>Apigee Istio Adapter v1.4.1, Apigee management automation. CI/CD pipelines: Swagger Hub, GitHub, Jenkins, GitLab.</p>
+            <p>Installed and administered <strong class="text-slate-300">Kubernetes HA clusters in AWS Central Canada</strong> (pre-EKS) using KOPS with least-privilege access.</p>
+            <p>Deployment automation: Ansible → vRealize → SaltStack. PostgreSQL, MySQL management and backup automation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 7 -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2018.02 — 2019.06</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Chapter Leader — DevOps Technical Leader</h3>
+          <p class="text-sm text-slate-500 mb-4">Cencosud · Santiago, Chile</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p><strong class="text-slate-300">Reduced AWS costs by 40%</strong>. Optimized environment creation from 4 hours to <strong class="text-slate-300">6 minutes</strong> using Jenkins + AWS CLI automation.</p>
+            <p>Multi-cloud (GCP + AWS). CyberSecurity standards: OWASP, IDS, IPS, SIEM. IEC 62443, ISO27001 certifications.</p>
+            <p>IoT initiatives for self-service stores, Scan & Go devices. REST APIs via Lambda + API Gateway. Apigee on GCP.</p>
+            <p>GCP services: BigQuery, Pub/Sub, Dataflow, Composer, Dataproc, Cloud Run, Cloud Functions, App Engine. AWS: Route53, EMR, ECS, EKS, CodePipeline, Lambda, Kinesis, Redshift, and more.</p>
+            <p>Spark, Kafka, ClickHouse, Splunk, ELK Stack. Infrastructure automation: AWS CDK (Go), GCP GoCDK. Angular + SpringBoot deployment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 8 - Deloitte -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2015.02 — 2018.01</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer Lead</h3>
+          <p class="text-sm text-slate-500 mb-4">Deloitte · Toronto, Canada</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>CI pipelines using XL-Release, Jenkins, Artifactory, Git, Docker — <strong class="text-slate-300">reduced deployment times by 30%</strong>.</p>
+            <p>Data pipelines: Kafka + Flink (data-streams), Apache Spark (transformations). <strong class="text-slate-300">Slashed cloud costs by 20%</strong>.</p>
+            <p>Dynamic configuration with AppConfig + Consul. Kubernetes on IBM Cloud. Datadog, ELK stack. ClickHouse analytics.</p>
+            <p>Scripts and provisioning: Terraform, Ansible, SaltStack, vRealize, Python, Bash. PostgreSQL management.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 9 - Sonnet -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2015.08 — 2017.06</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">DevOps Engineer Lead</h3>
+          <p class="text-sm text-slate-500 mb-4">Sonnet · Toronto, Canada</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>Kafka implementation, real-time data streaming, operational metrics. NodeJS and Java app management.</p>
+            <p>Automation: Python, Bash, Ansible, SaltStack. Custom tools for log access in restricted environments.</p>
+            <p>Jenkins (Jenkinsfile/groovy), Kibana, New Relic, Vault (Ansible). Spark administration. iOS/Android backend support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job 10 - WSIB -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-orange-400">2015.02 — 2015.08</span>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight">DevOps Engineer</h3>
+          <p class="text-sm text-slate-500 mb-4">WSIB · Toronto, Canada</p>
+          <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>ELK Stack monitoring. Deployment pipeline planning and design. Puppet, Docker, Jenkins, SonarQube, Artifactory, Consul, Ansible, AWS.</p>
+            <p>Automation scripting (Bash, Python). Guidewire Production Support. Java Integrations Development. Linux administration. API Security.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="px-6 pb-20">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-10">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="glow-line w-10"></div>
+        <h2 class="text-2xl font-semibold tracking-tight">Technical Skills</h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+      <!-- Cloud -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center">
+            <span class="iconify text-orange-400" data-icon="lucide:cloud" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Cloud, Infrastructure & Serverless</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-orange-500/10 text-orange-300 text-xs font-medium px-3 py-1.5 rounded-full border border-orange-500/20">AWS</span>
+          <span class="skill-pill bg-orange-500/10 text-orange-300 text-xs font-medium px-3 py-1.5 rounded-full border border-orange-500/20">Google Cloud</span>
+          <span class="skill-pill bg-orange-500/10 text-orange-300 text-xs font-medium px-3 py-1.5 rounded-full border border-orange-500/20">Azure</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">GDC / Anthos</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">OpenShift</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded<'d-full border border-white/10">AWS CDK / SST</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Azure Functions</span>
+        </div>
+      </div>
+
+      <!-- Containers -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+            <span class="iconify text-cyan-400" data-icon="lucide:boxes" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Containers, Orchestration & GitOps</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-cyan-500/10 text-cyan-300 text-xs font-medium px-3 py-1.5 rounded-full border border-cyan-500/20">Kubernetes</span>
+          <span class="skill-pill bg-cyan-500/10 text-cyan-300 text-xs font-medium px-3 py-1.5 rounded-full border border-cyan-500/20">Docker</span>
+          <span class="skill-pill bg-cyan-500/10 text-cyan-300 text-xs font-medium px-3 py-1.5 rounded-full border border-cyan-500/20">ArgoCD</span>
+          <span class="skill-pill bg-cyan-500/10 text-cyan-300 text-xs font-medium px-3 py-1.5 rounded-full border border-cyan-500/20">Istio</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Helm</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Kustomize</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Kyverno</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Karpenter</span>
+        </div>
+      </div>
+
+      <!-- CI/CD & IaC -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-violet-500/10 flex items-center justify-center">
+            <span class="iconify text-violet-400" data-icon="lucide:git-branch" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">CI/CD, Configuration Management & IaC</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-violet-500/10 text-violet-300 text-xs font-medium px-3 py-1.5 rounded-full border border-violet-500/20">Terraform</span>
+          <span class="skill-pill bg-violet-500/10 text-violet-300 text-xs font-medium px-3 py-1.5 rounded-full border border-violet-500/20">Ansible</span>
+          <span class="skill-pill bg-violet-500/10 text-violet-300 text-xs font-medium px-3 py-1.5 rounded-full border border-violet-500/20">Git</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">GitHub Actions</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">GitLab CI</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Azure DevOps</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">SonarQube</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Pulumi</span>
+        </div>
+      </div>
+
+      <!-- Observability -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+            <span class="iconify text-emerald-400" data-icon="lucide:activity" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Observability</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-emerald-500/10 text-emerald-300 text-xs font-medium px-3 py-1.5 rounded-full border border-emerald-500/20">OpenTelemetry</span>
+          <span class="skill-pill bg-emerald-500/10 text-emerald-300 text-xs font-medium px-3 py-1.5 rounded-full border border-emerald-500/20">Prometheus</span>
+          <span class="skill-pill bg-emerald-500/10 text-emerald-300 text-xs font-medium px-3 py-1.5 rounded-full border border-emerald-500/20">Grafana</span>
+          <span class="skill-pill bg-emerald-500/10 text-emerald-300 text-xs font-medium px-3 py-1.5 rounded-full border border-emerald-500/20">Loki</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Datadog</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">ELK Stack</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Splunk</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">New Relic</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Azure Monitor</span>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center">
+            <span class="iconify text-rose-400" data-icon="lucide:shield" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Networking, Security, APIs & Identity</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">HashiCorp Vault</span>
+          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">OIDC / OAuth 2.0</span>
+          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">Apigee</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Conjur</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">API Security</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Nginx</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">MS Defender</span>
+        </div>
+      </div>
+
+      <!-- Dev & Data -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center">
+            <span class="iconify text-amber-400" data-icon="lucide:code-2" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Development, Scripting & Data</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-amber-500/10 text-amber-300 text-xs font-medium px-3 py-1.5 rounded-full border border-amber-500/20">Python</span>
+          <span class="skill-pill bg-amber-500/10 text-amber-300 text-xs font-medium px-3 py-1.5 rounded-full border border-amber-500/20">Golang</span>
+          <span class="skill-pill bg-amber-500/10 text-amber-300 text-xs font-medium px-3 py-1.5 rounded-full border border-amber-500/20">Bash</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">TypeScript</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Java</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Node.js</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Kafka</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Spark</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Linux Admin</span>
+        </div>
+      </div>
+
+      <!-- AI / Agentic -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6 md:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-fuchsia-500/10 flex items-center justify-center">
+            <span class="iconify text-fuchsia-400" data-icon="lucide:brain" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">AI Coding Agents, Runtimes & Agentic Engineering</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-fuchsia-500/10 text-fuchsia-300 text-xs font-medium px-3 py-1.5 rounded-full border border-fuchsia-500/20">LangChain</span>
+          <span class="skill-pill bg-fuchsia-500/10 text-fuchsia-300 text-xs font-medium px-3 py-1.5 rounded-full border border-fuchsia-500/20">OpenAI API</span>
+          <span class="skill-pill bg-fuchsia-500/10 text-fuchsia-300 text-xs font-medium px-3 py-1.5 rounded-full border border-fuchsia-500/20">GitHub Copilot</span>
+          <span class="skill-pill bg-fuchsia-500/10 text-fuchsia-300 text-xs font-medium px-3 py-1.5 rounded-full border border-fuchsia-500/20">Claude / Claude Code</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Codex</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Ollama</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Qwen / DeepSeek</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Orca (Agent DE)</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Herdr</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certs" class="px-6 pb-20">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal mb-10">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="glow-line w-10"></div>
+        <h2 class="text-2xl font-semibold tracking-tight">Education & Certifications</h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- AWS SA -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-yellow-400" data-icon="lucide:award" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">2023.10</div>
+          <div class="text-sm font-semibold text-slate-200">AWS Certified Solutions Architect</div>
+        </div>
+      </div>
+
+      <!-- MIT -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-red-400" data-icon="lucide:graduation-cap" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">2020 — 2021</div>
+          <div class="text-sm font-semibold text-slate-200">MIT Professional Education — Cloud & DevOps: Continuous Transformation</div>
+        </div>
+      </div>
+
+      <!-- GCP Certs -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-blue-400" data-icon="lucide:cloud" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">2019 — 2020</div>
+          <div class="text-sm font-semibold text-slate-200">Google Cloud Professional Certificates</div>
+          <div class="text-xs text-slate-500 mt-1">Cloud Architecture · Cloud Engineering · Networking in GCP · Security in GCP · Anthos Hybrid Cloud</div>
+        </div>
+      </div>
+
+      <!-- K8s -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-cyan-400" data-icon="lucide:container" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">2019.11</div>
+          <div class="text-sm font-semibold text-slate-200">Google Certified Kubernetes Architect</div>
+        </div>
+      </div>
+
+      <!-- IBM -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-indigo-400" data-icon="lucide:server" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">2016.06</div>
+          <div class="text-sm font-semibold text-slate-200">IBM Softlayer Fundamentals Certification</div>
+        </div>
+      </div>
+
+      <!-- Other certs -->
+      <div class="reveal cert-badge bg-slate-800/30 border border-white/5 rounded-xl p-5 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-slate-500/10 flex items-center justify-center flex-shrink-0">
+          <span class="iconify text-slate-400" data-icon="lucide:file-badge" data-width="18"></span>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 mb-1">Earlier</div>
+          <div class="text-sm font-semibold text-slate-200">Additional Certifications</div>
+          <div class="text-xs text-slate-500 mt-1">Guidewire (2015) · Linux Networking Administration (2013) · Oracle PL/SQL Developer (2007)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="px-6 pb-20">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal">
+      <div class="bg-gradient-to-br from-slate-800/50 to-slate-800/20 border border-white/5 rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="glow-line w-10"></div>
+          <h2 class="text-2xl font-semibold tracking-tight">Get in Touch</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <a href="mailto:marcelo.garcia@linux.com" class="contact-link flex items-center gap-3 text-slate-400 group">
+              <div class="w-10 h-10 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-orange-500/10 transition-colors">
+                <span class="iconify text-slate-400 group-hover:text-orange-400 transition-colors" data-icon="lucide:mail" data-width="16"></span>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-600 mb-0.5">Email</div>
+                <div class="text-sm text-slate-300">marcelo.garcia@linux.com</div>
+              </div>
+            </a>
+            <a href="tel:+46732390562" class="contact-link flex items-center gap-3 text-slate-400 group">
+              <div class="w-10 h-10 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-orange-500/10 transition-colors">
+                <span class="iconify text-slate-400 group-hover:text-orange-400 transition-colors" data-icon="lucide:phone" data-width="16"></span>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-600 mb-0.5">Phone</div>
+                <div class="text-sm text-slate-300">+46 7 323 90562</div>
+              </div>
+            </a>
+          </div>
+          <div class="space-y-4">
+            <a href="https://www.linkedin.com/in/marcelodevops/" target="_blank" class="contact-link flex items-center gap-3 text-slate-400 group">
+              <div class="w-10 h-10 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-orange-500/10 transition-colors">
+                <span class="iconify text-slate-400 group-hover:text-orange-400 transition-colors" data-icon="lucide:linkedin" data-width="16"></span>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-600 mb-0.5">LinkedIn</div>
+                <div class="text-sm text-slate-300">linkedin.com/in/marcelodevops</div>
+              </div>
+            </a>
+            <a href="https://github.com/marcelodevops/" target="_blank" class="contact-link flex items-center gap-3 text-slate-400 group">
+              <div class="w-10 h-10 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-orange-500/10 transition-colors">
+                <span class="iconify text-slate-400 group-hover:text-orange-400 transition-colors" data-icon="lucide:github" data-width="16"></span>
+              </div>
+              <div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-600 mb-0.5">GitHub</div>
+                <div class="text-sm text-slate-300">github.com/marcelodevops</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-3 text-slate-500">
+          <span class="iconify" data-icon="lucide:map-pin" data-width="14"></span>
+          <span class="text-sm">Invernessvägen 18, Danderyd, Stockholm, Sweden</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/5 px-6 py-8">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-6 h-6 rounded bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-[10px]">MG</div>
+      <span class="text-xs text-slate-500">Marcelo Garcia — CV 2026</span>
+    </div>
+    <div class="text-xs text-slate-600">Designed with precision</div>
+  </div>
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
