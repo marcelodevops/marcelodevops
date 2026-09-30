@@ -1,2 +1,2 @@
 
-Please visit: https://marcelodevops.github.io/marcelodevops/ 
+Please visit: https://marcelodevops.github.io/
