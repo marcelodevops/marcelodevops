@@ -186,11 +186,11 @@ tailwind.config = {
           <h3 class="text-lg font-semibold tracking-tight">Senior DevOps &amp; Platform Engineer (Contract)</h3>
           <p class="text-sm text-slate-500 mb-4">Taina — Freight Forwarder Chile · Remote · Santiago, Chile</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
-            <p><strong class="text-slate-300">Cloud-Native Platform &amp; GitOps:</strong> Designed a Terraform-based <strong class="text-slate-300">Amazon EKS platform</strong> using EKS Pod Identity, <strong class="text-slate-300">Karpenter Spot</strong> autoscaling, and <strong class="text-slate-300">ArgoCD</strong> with automated synchronization, self-healing, and pruning.</p>
+            <p><strong class="text-slate-300">Cloud-Native Platform &amp; GitOps:</strong> Designed a Terraform-based <strong class="text-slate-300">Amazon EKS (Kubernetes 1.30+)</strong> platform using native EKS Pod Identity, <strong class="text-slate-300">Karpenter (v1.x) Spot</strong> autoscaling, and <strong class="text-slate-300">ArgoCD</strong> with automated synchronization, self-healing, and pruning.</p>
             <p><strong class="text-slate-300">High-Scale Ingress &amp; Capacity:</strong> Led <strong class="text-slate-300">Istio production-readiness and capacity assessments</strong> for onboarding ~96,000 transactions/minute onto shared ingress infrastructure; identified exhausted autoscaling headroom at 4/4 replicas and defined load testing, monitoring, staged rollout, and rollback requirements for a projected <strong class="text-slate-300">3× traffic increase</strong>.</p>
             <p><strong class="text-slate-300">Deep Performance Diagnostics:</strong> Investigated reported Istio sidecar memory consumption using Envoy, cAdvisor, and Prometheus telemetry; measured approximately 199 MiB of utilization and identified dashboard aggregation as the likely source of a <strong class="text-slate-300">1.8 GiB discrepancy</strong>.</p>
             <p><strong class="text-slate-300">Zero-Trust Security &amp; Identity:</strong> Hardened Kubernetes secrets architecture with <strong class="text-slate-300">CyberArk Conjur OSS and External Secrets Operator</strong>, addressing CA trust, SAN validation, JWT service-account identity, and OIDC issuer, audience, and JWKS configuration.</p>
-            <p><strong class="text-slate-300">Agentic Logistics &amp; Local LLM Tooling:</strong> Built <strong class="text-slate-300">Python (FastAPI)</strong> microservices and an agentic logistics system using <strong class="text-slate-300">LangChain and Azure OpenAI</strong> to assign cargo to vessels based on dimensions, routes, and priorities, deployed on <strong class="text-slate-300">Azure Kubernetes Service (AKS)</strong>; evaluated local LLM runtimes (<strong class="text-slate-300">Ollama, Qwen, DeepSeek</strong>) with <strong class="text-slate-300">LangSmith</strong> tracing.</p>
+            <p><strong class="text-slate-300">Agentic Logistics &amp; Local LLM Tooling:</strong> Built <strong class="text-slate-300">Python 3.12 (FastAPI)</strong> microservices and an agentic logistics system using <strong class="text-slate-300">LangChain and Azure OpenAI</strong> to assign cargo to vessels based on dimensions, routes, and priorities, deployed on <strong class="text-slate-300">Azure Kubernetes Service (AKS)</strong>; evaluated local LLM runtimes (<strong class="text-slate-300">DeepSeek-R1, Qwen 2.5</strong>) via <strong class="text-slate-300">Ollama</strong> with <strong class="text-slate-300">LangSmith</strong> tracing.</p>
           </div>
         </div>
       </div>
@@ -205,8 +205,8 @@ tailwind.config = {
           <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer</h3>
           <p class="text-sm text-slate-500 mb-4">FirstVet · Remote · Stockholm, Sweden</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
-            <p><strong class="text-slate-300">Aggressive Cloud Cost Optimization:</strong> Spearheaded multi-tier AWS cost reduction strategies; implemented <strong class="text-slate-300">Compute Savings Plans and RDS Reserved Instances</strong>, replaced AWS Transfer Family with self-managed SFTP on EC2, and transitioned ElastiCache Redis to <strong class="text-slate-300">Valkey</strong>, generating substantial recurring cloud savings.</p>
-            <p><strong class="text-slate-300">Logging Architecture Revamp:</strong> Eliminated redundant CloudWatch log ingestion expenses by redesigning log pipelines to route exclusively via <strong class="text-slate-300">Promtail and Loki</strong> into centralized Grafana dashboards.</p>
+            <p><strong class="text-slate-300">Aggressive Cloud Cost Optimization:</strong> Spearheaded multi-tier AWS cost reduction strategies; implemented <strong class="text-slate-300">Compute Savings Plans and RDS Reserved Instances</strong>, replaced AWS Transfer Family with self-managed SFTP on EC2, and transitioned from ElastiCache Redis 7 to <strong class="text-slate-300">Valkey 7.2</strong>, generating substantial recurring cloud savings.</p>
+            <p><strong class="text-slate-300">Logging Architecture Revamp:</strong> Eliminated redundant CloudWatch log ingestion expenses by redesigning log pipelines to route exclusively via <strong class="text-slate-300">Promtail and Loki 3.0</strong> into centralized Grafana dashboards.</p>
             <p><strong class="text-slate-300">Unified Observability &amp; FinOps Alerts:</strong> Built comprehensive <strong class="text-slate-300">Grafana, Loki, Prometheus, and OpenTelemetry</strong> observability stacks with custom FinOps cost-allocation dashboards and real-time AWS Billing anomaly alerts.</p>
             <p><strong class="text-slate-300">Infrastructure Automation:</strong> Managed and provisioned Amazon ECS clusters and cloud networking resources with <strong class="text-slate-300">Pulumi and TypeScript</strong>.</p>
           </div>
@@ -223,10 +223,10 @@ tailwind.config = {
           <h3 class="text-lg font-semibold tracking-tight">Senior SRE &amp; DevOps Consultant (Expertake)</h3>
           <p class="text-sm text-slate-500 mb-4">Client: Arelion · Stockholm, Sweden</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
-            <p><strong class="text-slate-300">Mission-Critical Cloud Migration:</strong> Delivered a cloud migration against a tight <strong class="text-slate-300">3-month deadline</strong> from on-premises Docker Swarm to AWS, migrating <strong class="text-slate-300">~50 Java microservices to Amazon EKS</strong> and ~15 distributed stateful platforms (Kafka, ZooKeeper, RabbitMQ, MongoDB, MSSQL) to EC2 and RDS.</p>
+            <p><strong class="text-slate-300">Mission-Critical Cloud Migration:</strong> Delivered a cloud migration against a tight <strong class="text-slate-300">3-month deadline</strong> from on-premises Docker Swarm to AWS, migrating <strong class="text-slate-300">~50 Java microservices (Java 11/17 LTS, Spring Boot 2.7/3.x, Payara 5/6) to Amazon EKS (Kubernetes 1.25–1.28)</strong> and ~15 distributed stateful platforms (Kafka, ZooKeeper, RabbitMQ, MongoDB, MSSQL) to EC2 and RDS.</p>
             <p><strong class="text-slate-300">GitOps &amp; Release Automation:</strong> Implemented <strong class="text-slate-300">Helmfile and ArgoCD</strong> for version-controlled Kubernetes release management; engineered enterprise CI/CD workflows in <strong class="text-slate-300">GitHub Actions</strong> for Spring Boot and Payara microservices.</p>
             <p><strong class="text-slate-300">Perimeter DevSecOps:</strong> Strengthened infrastructure perimeter defenses in collaboration with Cybersecurity, establishing <strong class="text-slate-300">AWS WAF rules, Shield DDoS protection, Service Control Policies (SCPs)</strong>, and IDS/IPS inspection.</p>
-            <p><strong class="text-slate-300">IaC, Observability &amp; Database Modernization:</strong> Automated infrastructure provisioning using <strong class="text-slate-300">Terraform and AWS CDK with Go</strong>; integrated <strong class="text-slate-300">Datadog and ELK Stack</strong> monitoring across migrated workloads, and orchestrated MongoDB and MSSQL cutovers to AWS RDS.</p>
+            <p><strong class="text-slate-300">IaC, Observability &amp; Database Modernization:</strong> Automated infrastructure provisioning using <strong class="text-slate-300">Terraform 1.x and AWS CDK v2 with Go</strong>; integrated <strong class="text-slate-300">Datadog and ELK Stack</strong> monitoring across migrated workloads, and orchestrated MongoDB and MSSQL cutovers to AWS RDS.</p>
           </div>
         </div>
       </div>
@@ -241,8 +241,8 @@ tailwind.config = {
           <p class="text-sm text-slate-500 mb-4">H&amp;M Group · Stockholm, Sweden</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
             <p><strong class="text-slate-300">Data Mesh Proof of Concept:</strong> Worked on a Google Cloud <strong class="text-slate-300">Data Mesh proof of concept</strong> and served as a technical reference for the planned migration of data assets from Azure Storage to Google BigQuery.</p>
-            <p><strong class="text-slate-300">Real-Time Streaming Pipelines:</strong> Implemented <strong class="text-slate-300">Apache Kafka</strong> streaming pipelines utilizing custom Google Cloud Dataflow Flex Templates to stream real-time events into BigQuery and Pub/Sub.</p>
-            <p><strong class="text-slate-300">Multi-Cloud Secrets Management PoC:</strong> Developed two proofs of concept, one on <strong class="text-slate-300">Google Cloud Platform (GCP)</strong> and another on <strong class="text-slate-300">Azure Kubernetes Service (AKS)</strong>, to test <strong class="text-slate-300">HashiCorp Vault</strong> secrets management across multi-cloud environments.</p>
+            <p><strong class="text-slate-300">Real-Time Streaming Pipelines:</strong> Implemented <strong class="text-slate-300">Apache Kafka (v2.8/3.x)</strong> streaming pipelines utilizing custom Google Cloud Dataflow Flex Templates to stream real-time events into BigQuery and Pub/Sub.</p>
+            <p><strong class="text-slate-300">Multi-Cloud Secrets Management PoC:</strong> Developed two proofs of concept, one on <strong class="text-slate-300">Google Cloud Platform (GCP)</strong> and another on <strong class="text-slate-300">Azure Kubernetes Service (AKS)</strong>, to test <strong class="text-slate-300">HashiCorp Vault (v1.8+)</strong> secrets management across multi-cloud environments.</p>
             <p><strong class="text-slate-300">Multi-Cloud CI/CD &amp; Telemetry:</strong> Built reusable GitHub Actions workflows across GCP, Azure, and AWS; added <strong class="text-slate-300">Grafana dashboards</strong> and operational KPIs, and used <strong class="text-slate-300">Azure Monitor</strong> to improve application visibility.</p>
           </div>
         </div>
@@ -259,7 +259,7 @@ tailwind.config = {
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
             <p><strong class="text-slate-300">Azure DevOps &amp; Cloud Platform:</strong> Managed Azure DevOps platform and supported cloud-based application environments.</p>
             <p><strong class="text-slate-300">Monitoring &amp; Operational Visibility:</strong> Implemented monitoring solutions and dashboards to improve visibility and operational awareness.</p>
-            <p><strong class="text-slate-300">PowerShell &amp; Windows Automation:</strong> Automated operational processes using <strong class="text-slate-300">PowerShell</strong>, reducing manual intervention and minimizing human error in Windows environments.</p>
+            <p><strong class="text-slate-300">PowerShell &amp; Windows Automation:</strong> Automated operational processes using <strong class="text-slate-300">PowerShell 7 and 5.1</strong>, reducing manual intervention and minimizing human error across enterprise Windows Server 2019 environments.</p>
             <p><strong class="text-slate-300">Platform Reliability &amp; Risk Mitigation:</strong> Contributed to planning and risk mitigation strategies for platform reliability.</p>
             <p><strong class="text-slate-300">Technical Mentorship:</strong> Mentored team members and supported knowledge sharing.</p>
           </div>
@@ -277,8 +277,8 @@ tailwind.config = {
           <p class="text-sm text-slate-500 mb-4">Equifax · Remote — UK, Australia, USA</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
             <p><strong class="text-slate-300">Apigee Enterprise Cloud Migration:</strong> Led the cross-cloud <strong class="text-slate-300">migration of Apigee Edge API Gateway from AWS to Google Cloud Platform</strong>, integrating gateway traffic with OpenShift container clusters.</p>
-            <p><strong class="text-slate-300">Istio Service Mesh Security:</strong> Configured and managed Kubernetes clusters on GCP with <strong class="text-slate-300">Istio service mesh</strong> and the Apigee Istio Adapter (v1.4.1).</p>
-            <p><strong class="text-slate-300">HA Kubernetes Architecture:</strong> Engineered and managed resilient, highly available Kubernetes clusters in <strong class="text-slate-300">AWS Canada Central using kOps</strong> with least-privilege IAM security controls prior to regional EKS availability.</p>
+            <p><strong class="text-slate-300">Istio Service Mesh Security:</strong> Configured and managed Kubernetes clusters on GCP with <strong class="text-slate-300">Istio service mesh</strong> and the <strong class="text-slate-300">Apigee Istio Adapter (v1.4.1)</strong>.</p>
+            <p><strong class="text-slate-300">HA Kubernetes Architecture:</strong> Engineered and managed resilient, highly available <strong class="text-slate-300">Kubernetes (v1.14/1.15)</strong> clusters in <strong class="text-slate-300">AWS Canada Central using kOps</strong> with least-privilege IAM security controls prior to regional EKS availability.</p>
           </div>
         </div>
       </div>
@@ -293,10 +293,10 @@ tailwind.config = {
           <p class="text-sm text-slate-500 mb-4">Cencosud · Santiago, Chile</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
             <p><strong class="text-slate-300">Cloud Cost Optimization:</strong> <strong class="text-slate-300">Reduced AWS cloud infrastructure costs by 40%</strong> through infrastructure optimization and automation.</p>
-            <p><strong class="text-slate-300">Provisioning Velocity (4h to 6min):</strong> Reduced environment provisioning lead-time <strong class="text-slate-300">from 4 hours to 6 minutes (97.5% reduction)</strong> via Jenkins automation pipelines and AWS CLI scripting, eliminating human deployment errors.</p>
+            <p><strong class="text-slate-300">Provisioning Velocity (4h to 6min):</strong> Reduced environment provisioning lead-time <strong class="text-slate-300">from 4 hours to 6 minutes (97.5% reduction)</strong> via <strong class="text-slate-300">Jenkins 2.x</strong> automation pipelines and AWS CLI scripting, eliminating human deployment errors.</p>
             <p><strong class="text-slate-300">Security Compliance Standards:</strong> Coordinated enterprise security hardening and compliance audits for <strong class="text-slate-300">IEC 62443 and ISO 27001</strong> certifications across multi-cloud environments (AWS and GCP).</p>
             <p><strong class="text-slate-300">IoT Retail Innovation:</strong> Pioneered smart supermarket IoT initiatives, deploying automated serverless REST APIs (<strong class="text-slate-300">AWS API Gateway + Lambda</strong>) for self-service sensor arrays and Scan &amp; Go retail devices.</p>
-            <p><strong class="text-slate-300">MLOps Workflows:</strong> Worked on MLOps workflows using <strong class="text-slate-300">Amazon SageMaker and Kubeflow</strong> components.</p>
+            <p><strong class="text-slate-300">MLOps Workflows:</strong> Worked on MLOps workflows using <strong class="text-slate-300">Amazon SageMaker and Kubeflow (v0.3/0.4)</strong> components.</p>
           </div>
         </div>
       </div>
@@ -311,8 +311,8 @@ tailwind.config = {
           <h3 class="text-lg font-semibold tracking-tight">Senior DevOps Engineer &amp; Lead Consultant</h3>
           <p class="text-sm text-slate-500 mb-4">Deloitte Canada · Toronto, Canada</p>
           <div class="space-y-2 text-sm text-slate-400 leading-relaxed">
-            <p><strong class="text-slate-300">Senior DevOps Engineer Lead — Deloitte (07/2017 – 01/2018):</strong> Cut deployment cycles by <strong class="text-slate-300">30%</strong> and AWS costs by <strong class="text-slate-300">20%</strong>; engineered CI pipelines with XL-Release, Jenkins, and Docker; built streaming data transformations with Kafka, Flink, and Apache Spark.</p>
-            <p><strong class="text-slate-300">DevOps Lead — Client: Sonnet Insurance (08/2015 – 06/2017):</strong> Built automated <strong class="text-slate-300">Kafka data streaming platforms</strong>; automated deployment and server provisioning using Ansible, SaltStack, and Python; established HashiCorp Vault encryption for sensitive data.</p>
+            <p><strong class="text-slate-300">Senior DevOps Engineer Lead — Deloitte (07/2017 – 01/2018):</strong> Cut deployment cycles by <strong class="text-slate-300">30%</strong> and AWS costs by <strong class="text-slate-300">20%</strong>; engineered CI pipelines with XL-Release, Jenkins, and <strong class="text-slate-300">Docker (v1.12+)</strong>; built streaming data transformations with <strong class="text-slate-300">Apache Kafka (0.10/0.11), Apache Flink 1.x, and Apache Spark 2.x</strong>.</p>
+            <p><strong class="text-slate-300">DevOps Lead — Client: Sonnet Insurance (08/2015 – 06/2017):</strong> Built automated <strong class="text-slate-300">Kafka data streaming platforms</strong>; automated deployment and server provisioning using <strong class="text-slate-300">Ansible 2.x</strong>, SaltStack, and Python; established HashiCorp Vault encryption for sensitive data.</p>
             <p><strong class="text-slate-300">DevOps Engineer — Client: WSIB (02/2015 – 08/2015):</strong> Planned automated deployment pipelines using Puppet, Docker, and Jenkins; configured <strong class="text-slate-300">ELK Stack monitoring</strong> and supported Guidewire production integrations.</p>
           </div>
         </div>
