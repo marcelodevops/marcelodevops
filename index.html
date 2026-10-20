@@ -423,23 +423,55 @@ tailwind.config = {
         </div>
       </div>
 
-      <!-- Security -->
+      <!-- Security & Identity -->
       <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-4">
           <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center">
-            <span class="iconify text-rose-400" data-icon="lucide:shield" data-width="16"></span>
+            <span class="iconify text-rose-400" data-icon="lucide:shield-check" data-width="16"></span>
           </div>
-          <h3 class="text-sm font-semibold">Security, Identity &amp; Networking</h3>
+          <h3 class="text-sm font-semibold">Security &amp; Identity Management</h3>
         </div>
         <div class="category-cloud">
           <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">HashiCorp Vault</span>
           <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">CyberArk Conjur</span>
-          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">External Secrets Operator</span>
+          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">Keycloak</span>
+          <span class="skill-pill bg-rose-500/10 text-rose-300 text-xs font-medium px-3 py-1.5 rounded-full border border-rose-500/20">FreeIPA</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">External Secrets Operator</span>
           <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">OIDC &amp; OAuth 2.0</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">mTLS</span>
           <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">AWS WAF &amp; Shield</span>
           <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Apigee API Gateway</span>
-          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">mTLS</span>
+        </div>
+      </div>
+
+      <!-- Networking & Traffic Engineering -->
+      <div class="reveal bg-slate-800/30 border border-white/5 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center">
+            <span class="iconify text-sky-400" data-icon="lucide:network" data-width="16"></span>
+          </div>
+          <h3 class="text-sm font-semibold">Networking &amp; Traffic Engineering</h3>
+        </div>
+        <div class="category-cloud">
+          <span class="skill-pill bg-sky-500/10 text-sky-300 text-xs font-medium px-3 py-1.5 rounded-full border border-sky-500/20">Cilium</span>
+          <span class="skill-pill bg-sky-500/10 text-sky-300 text-xs font-medium px-3 py-1.5 rounded-full border border-sky-500/20">Calico (CNI)</span>
+          <span class="skill-pill bg-sky-500/10 text-sky-300 text-xs font-medium px-3 py-1.5 rounded-full border border-sky-500/20">Envoy Proxy</span>
+          <span class="skill-pill bg-sky-500/10 text-sky-300 text-xs font-medium px-3 py-1.5 rounded-full border border-sky-500/20">NetBox (IPAM/DCIM)</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">WireGuard</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">OpenVPN</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Traefik</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">HAProxy</span>
           <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Nginx</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">AWS Transit Gateway</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Direct Connect</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Cloud Interconnect</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">VPC Peering</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">BGP</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Cloudflare</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">CoreDNS</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Wireshark</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">tcpdump</span>
+          <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">iperf</span>
           <span class="skill-pill bg-slate-700/50 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">Linux Network Admin</span>
         </div>
       </div>
