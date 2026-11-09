@@ -3,7 +3,18 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/marcelodevops/marcelodevops.github.io/blob/main/calvincloud.png">
       <source media="(prefers-color-scheme: light)" srcset="https://github.com/marcelodevops/marcelodevops.github.io/blob/main/calvincloud.png">
-      <img alt="Marcelodevops" src="https://github.com/marcelodevops/marcelodevops.github.io/blob/main/calvincloud.png" width="1000">
+      <img alt="Marcelodevops" src="https://github.com/marcelodevops/marcelodevops.github.io/blob/main/calvincloud.png" width="900">
+    </picture>
+  </a>
+</p>
+Latest projects:
+- Dupond autonomous project coordination experiment
+<p>
+  <a href="https://github.com/marcelodevops/dupond/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/marcelodevops/dupond/blob/main/resources/dupond-banner.png">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/marcelodevops/dupond/blob/main/resources/dupond-banner.png">
+      <img alt="Marcelodevops" src="https://github.com/marcelodevops/dupond/blob/main/resources/dupond-banner.png" width="900">
     </picture>
   </a>
 </p>
