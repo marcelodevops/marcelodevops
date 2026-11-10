@@ -18,3 +18,5 @@ Latest projects:
     </picture>
   </a>
 </p>
+
+Human contributors are welcome!!!.....And their agents too. I don't discriminate 
