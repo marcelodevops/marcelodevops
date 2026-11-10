@@ -7,8 +7,13 @@
     </picture>
   </a>
 </p>
-Latest projects:
+<p>
+  <label>
+    Latest project:
+  </label>
+
 - Dupond autonomous project coordination experiment
+</p>
 <p>
   <a href="https://github.com/marcelodevops/dupond/">
     <picture>
@@ -19,4 +24,4 @@ Latest projects:
   </a>
 </p>
 
-Human contributors are welcome!!!.....And their agents too. I don't discriminate 
+
